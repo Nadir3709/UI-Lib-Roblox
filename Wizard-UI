@@ -32,7 +32,7 @@ Section:CreateDropdown("DropDown", {"DropDown", "DropDown 2", "DropDown 3"}, 1, 
 end)
 
 --Create Slider
-Section:CreateSlider("Slider", 0, 500, 16, false, function(Speed)
+Section:CreateSlider("WalkSpeed", 0, 500, 16, false, function(Speed)
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
 end)
 
