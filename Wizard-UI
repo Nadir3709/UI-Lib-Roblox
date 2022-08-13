@@ -1,0 +1,42 @@
+-- Loadstring
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+-- Create Window
+local Window = Library:NewWindow("New Window")
+
+-- Create Section
+local Section = Window:NewSection("New Section")
+
+-- Create Button
+Section:CreateButton("Button", function()
+    print("Clicked")
+end)
+
+--Create TextBox
+Section:CreateTextbox("TextBox", function(Text)
+    print(Text)
+end)
+
+--Create Toggle
+Section:CreateToggle("Toggle", function(state)
+    if state then
+        print("Toggle On")
+    else
+        print("Toggle Off")
+    end
+end)
+
+--Create DropDown
+Section:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(Text)
+    print(Text)
+end)
+
+--Create Slider
+Section:CreateSlider("Slider", 0, 100, 15, false, function(value)
+    print(value)
+end)
+
+--Create Color Picker
+Section:CreateColorPicker("Picker", Color3.new(255, 255, 255), function(value)
+    print(value)
+end)
