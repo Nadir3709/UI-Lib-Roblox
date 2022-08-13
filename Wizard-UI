@@ -13,8 +13,8 @@ Section:CreateButton("Button", function()
 end)
 
 --Create TextBox
-Section:CreateTextbox("TextBox", function(Text)
-    print(Text)
+Section:CreateTextbox("TextBox", function(txt)
+    print(txt)
 end)
 
 --Create Toggle
@@ -27,13 +27,13 @@ Section:CreateToggle("Toggle", function(state)
 end)
 
 --Create DropDown
-Section:CreateDropdown("DropDown", {"Hello", "World", "Hello World"}, 2, function(Text)
-    print(Text)
+Section:CreateDropdown("DropDown", {"DropDown", "DropDown 2", "DropDown 3"}, 1, function(DropDown)
+    print(DropDown)
 end)
 
 --Create Slider
-Section:CreateSlider("Slider", 0, 100, 15, false, function(value)
-    print(value)
+Section:CreateSlider("Slider", 0, 500, 16, false, function(Speed)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Speed
 end)
 
 --Create Color Picker
